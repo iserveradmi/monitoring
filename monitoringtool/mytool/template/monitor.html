@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>monitor</title>
+    <style>
+        body {width:99%; background-color: lightblue;}
+        table {width:99%; margine:auto; border-collapse: collapse; }
+        td,th {border:1px solid; width:10%;}
+        input {width:80%; height:50px;   }
+        button {width:15%; height:56px; background-color: #1D7DFF; border:none; }
+        .inline { width:70%; height:50px; margin: auto;}
+    </style>
+</head>
+<body>
+<h1><center>Enter you Domain name to Website Audit</center></h1><br>
+
+<div class="inline">
+    <input type="text" placeholder="Enter Url" >
+    <button onclick="myFunction()">Check</button>
+</div>
+<br><br>
+<div id="myDIV" style="display:none">
+
+<h3><center>Result for {{url}}</center></h3><br>
+
+
+<table >
+    <tr>
+        <th>  Performance:    </th>
+        <th>  Accessibility:    </th>
+        <th>  Best Practices:    </th>
+        <th>  SEO:    </th>
+        <th>  Progressive Web App:</th>
+        <th>  maxWaitForFcp:</th>
+        <th>  maxWaitForLoad:</th>
+    </tr>
+    <tr>
+        <td>  {{per}}   </td>
+        <td>  {{acc}}   </td>
+        <td>  {{bp}}   </td>
+        <td>  {{seo}}   </td>
+        <td>  {{pwa}}   </td>
+        <td>  {{fcp}}   </td>
+        <td>  {{load}}   </td>
+    </tr>
+</table>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
